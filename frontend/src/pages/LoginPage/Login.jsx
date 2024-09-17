@@ -18,18 +18,19 @@ export default function Login() {
           </div>
           <div className={styles.authenticationDiv}>
             <Button
-              variant="contained"
-              sx={{ padding: "1em", display: "flex", gap: "1em" }}
+              sx={{
+                backgroundColor: "white",
+                border: "1px solid #ECEDE9",
+                padding: "1em",
+                color: "black",
+                display: "flex",
+                gap: "1em",
+              }}
             >
               <img src="\public\images\google_icon.png" />
-              Sign In With Google
-            </Button>
-            <Button
-              variant="contained"
-              sx={{ padding: "1em", display: "flex", gap: "1em" }}
-            >
-              <img src="\public\images\google_icon.png" />
-              Sign In With Apple
+              <Typography>
+                Sign In With <strong>Google</strong>
+              </Typography>
             </Button>
           </div>
           <div>
