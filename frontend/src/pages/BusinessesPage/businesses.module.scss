@@ -1,0 +1,43 @@
+.businessesMainDiv{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.filterPanel{
+    width: 20%;
+    height: 100%;
+    background-color: pink;
+}
+
+.discoveryPanel{
+    width: 80%;
+    height: 100%;
+    background-color: tan;
+}
+
+.businessesDiv{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    padding: 2em;
+    gap: 1em;
+}
+
+.businessCardDiv{
+    background-color: white;
+}
+
+.businessCardImageDiv{
+    height: 20vh;
+    width: 15vw;
+}
+
+.businessCardImage{
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    object-position: center;
+    border-radius: 15px;
+}
