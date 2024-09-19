@@ -1,6 +1,6 @@
 import styles from "./businesses.module.scss";
 import React, { useState, useEffect } from "react";
-import { Paper } from "@mui/material";
+import { Button, Paper } from "@mui/material";
 import axios from "axios";
 
 export default function Businesses() {
@@ -50,6 +50,7 @@ function BusinessCard({ prop }, index) {
           </p>
         </span>
       </Paper>
+      <Button variant="contained">View Staff</Button>
     </div>
   );
 }

@@ -18,15 +18,18 @@
 
 .businessesDiv{
     display:flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-color: blue;
+    flex-wrap: wrap;
     padding: 2em;
-    gap: 1em;
+    gap: 2em;
 }
 
 .businessCardDiv{
     background-color: white;
+    height: 40vh;
 }
 
 .businessCardImageDiv{

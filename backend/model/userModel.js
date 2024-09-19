@@ -2,7 +2,11 @@ const knex = require("../db");
 
 const User = {
   getAllUsers: async () => {
-    return knex.from("user").select("*");
+    return knex.from("users").select("*");
+  },
+
+  findEmail: async (email) => {
+    return knex.from("users").where({ email: email }).first();
   },
 
   addUser: async ({
@@ -10,22 +14,25 @@ const User = {
     lastName,
     dob,
     email,
+    password,
     phoneNumber,
     bio,
     bioImageUrl,
-    userTypeID,
+    roleID,
   }) => {
-    return knex("user").insert({
+    return knex("users").insert({
       first_name: firstName,
       last_name: lastName,
-      dob: dob,
       email: email,
+      password: password,
       phone_number: phoneNumber,
       bio: bio,
       bio_image_url: bioImageUrl,
-      user_type_id: userTypeID,
+      // role_id: roleID,
     });
   },
+
+  loginUser: async () => {},
 };
 
 module.exports = User;
