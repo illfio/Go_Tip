@@ -9,8 +9,10 @@ import {
 import axios from "axios";
 import styles from "./signup.module.scss";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
+  let navigate = useNavigate();
   let [showWorkerInput, setShowWorkerInput] = useState(false);
 
   const [user, setUser] = useState({
@@ -41,6 +43,7 @@ export default function Signup() {
       roleID: 0,
       workerRoleID: 0,
     });
+    setShowWorkerInput(false);
   };
 
   const handleFormSubmit = async () => {
@@ -160,7 +163,9 @@ export default function Signup() {
           )}
         </div>
         <div className={styles.formButtonsDiv}>
-          <Button variant="contained">Login</Button>
+          <Button variant="contained" onClick={() => navigate("/login")}>
+            Login
+          </Button>
           <Button
             variant="contained"
             onClick={() => {

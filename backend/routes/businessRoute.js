@@ -1,29 +1,25 @@
 const express = require("express");
-const app = express();
 const router = express.Router();
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
-const User = require("../model/userModel");
 const Customer = require("../model/customerModel");
 const Worker = require("../model/workerModel");
 const Owner = require("../model/ownerModel");
 const Business = require("../model/businessModel");
+const WorkerBusiness = require("../model/workerBusinessModel");
 
-router.get("/", async (req, res) => {
+router.get("/getBusiness/:bid", async (req, res) => {
+  const businessID = req.params.bid;
   try {
-    let result = await Business.getBusiness();
+    let result = await Business.getBusinessInfo(businessID);
     res.json(result);
   } catch (error) {
     console.error({ error: error });
   }
 });
 
-router.get("/getWorkers/:id", async (req, res) => {
+router.get("/getWorkers/:bid", async (req, res) => {
+  const businessID = req.params.bid;
   try {
-    let result = await Business.getWorkersInBusiness(req.params.id);
-
+    let result = await WorkerBusiness.getWorkersInBusiness(businessID);
     res.json(result);
   } catch (error) {
     console.error({ error: error });

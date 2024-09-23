@@ -32,7 +32,21 @@ const User = {
     });
   },
 
-  loginUser: async () => {},
+  findGoogleEmailAndGoogleID: async ({ email, googleID }) => {
+    return knex
+      .from("users")
+      .where({ email: email, google_user_id: googleID })
+      .first();
+  },
+
+  updateGoogleID: async ({ email, googleID }) => {
+    return knex("users")
+      .where({ email: email })
+      .andWhere(function () {
+        this.whereNull("google_user_id");
+      })
+      .update({ google_user_id: googleID });
+  },
 };
 
 module.exports = User;

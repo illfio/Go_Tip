@@ -1,0 +1,18 @@
+- ALL FUNCTIONALITY INVOLVING MONEY ***
+---> tip functionality 
+---> cashout functionality
+
+______ for customer ______
+- map out workers from each restaurant ***
+- when clicking on worker, add brief profile pop out ***
+- add tipping functionality ***
+
+______ for worker ________
+- link to a business
+- worker dashboard, showing balance and etc
+- ability to cash out
+
+- different dashboards ***
+- forgot password **
+- google login **
+- ratings *
