@@ -5,10 +5,6 @@ const User = {
     return knex.from("users").select("*");
   },
 
-  findEmail: async (email) => {
-    return knex.from("users").where({ email: email }).first();
-  },
-
   addUser: async ({
     firstName,
     lastName,
@@ -30,6 +26,18 @@ const User = {
       bio_image_url: bioImageUrl,
       // role_id: roleID,
     });
+  },
+
+  deleteUser(id) {
+    return knex("users").where({ id }).del();
+  },
+
+  updateUser(id, user) {
+    return knex("users").where({ id }).update(user);
+  },
+
+  findEmail: async (email) => {
+    return knex.from("users").where({ email: email }).first();
   },
 
   findGoogleEmailAndGoogleID: async ({ email, googleID }) => {

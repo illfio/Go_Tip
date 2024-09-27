@@ -9,3 +9,15 @@ const User = require("../model/userModel");
 const Customer = require("../model/customerModel");
 const Worker = require("../model/workerModel");
 const Owner = require("../model/ownerModel");
+
+const Payment = {
+  createPayment(paymentMethod) {
+    return knex("payment_methods").insert(paymentMethod).select("*");
+  },
+  updatePayment(id, paymentMethod) {
+    return knex("payment_methods").where({ id }).update(paymentMethod);
+  },
+  deletePayment(id) {
+    return knex("payment_methods").where({ id }).del();
+  },
+};

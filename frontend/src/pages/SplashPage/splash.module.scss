@@ -1,0 +1,146 @@
+.splashPageDiv{
+    background-color: #FCFBF9;
+}
+
+.heroSection{
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.heroSectionContent{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.heroSectionSmallHeaderDiv{
+    display: flex;
+    gap: 1em;
+    color: #F97316;
+    border: 1px solid #FED7AA;
+    padding: .75em 0;
+    border-radius: 20px;
+    width: 25%;
+    justify-content: center;
+}
+
+.heroSectionBigHeader{
+    font-size: 4vw;
+}
+
+.heroSectionSearchInputDiv{
+    width: 60%;
+    height: 12%;
+    position: relative;
+}
+
+.heroSectionSearchInputDiv input{
+    width: 100%;
+    height: 100%;
+    padding: 1.25em 3em;
+    border-radius: 10px;
+    border: 1px solid #E5E5E5;
+}
+
+.heroSectionSearchInputDiv input:focus{
+    outline: none;
+}
+
+.heroSectionSearchImage{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 2%;
+}
+
+.heroSectionSearchButton{
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-radius: 10px;
+    background-color: #FB923C;
+    color: white;
+    border: none;
+    padding: .5em 1em;
+}
+
+.heroSectionSearchButton:hover {
+    cursor: pointer;
+}
+
+
+.heroSectionSearchCategories{
+    display: flex;
+    gap: .5em;
+}
+
+.heroSectionCategoriesItemDiv{
+    border: 1px solid #E5E5E5;
+    padding: .5em 1em;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.storySection{
+    display:flex;
+    padding: 0 8em;
+}
+
+.storyImageDiv{
+    margin-right: 8em;
+}
+
+.storyContent{
+    width: 60%;
+    display:flex;
+    flex-direction: column;
+    gap: 4em;
+    justify-content: center;
+}
+
+.storyContentSmallHeader{
+    font-size: 2.5vw;
+    font-weight: 300;
+}
+
+.storyContentBigHeader{
+    font-size: 3vw;
+}
+
+.storyContentBiggerHeaderDiv{
+    display:flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.storyContentBrandHeader{
+    font-size: 3vw;
+}
+
+.storyContentBrandHeaderEmphasis{
+    position: relative;
+    right: 20px;
+}
+
+.storyContentBio{
+    font-size: 1.25vw;
+    font-weight: 300;
+    line-height: 3.5vh;
+}
+
+.storyContentButton{
+    border-radius: 10px;
+    background-color: #FB923C;
+    color: white;
+    border: none;
+    padding: 1em 1em;
+    width: 25%;
+    font-weight: 600;
+}
